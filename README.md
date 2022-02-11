@@ -1,10 +1,42 @@
-# BFMC - Brain Project
+# Working with Github
 
-The project contains all the provided code for the RPi, more precisely:
-- Firmware for communicating with the Nucleo and control the robot movements (Speed with constant current consumption, speed with constant speed and steering);
-- Firmware for gathering data from the sensors (IMU and Camera);
-- API's for communicating with the environmental servers at Bosch location;
-- Simulated servers for the API's.
+# To run the code
 
-## The documentation is available in more details here:
-[Documentation](https://boschfuturemobility.com/brain/)
+
+## For Windows
+
+1) Install GitHub Desktop
+2) In File / Clone repository
+3) Paste updated files in cloned repository
+4) Put commit message (Summary of changes) and press the Commit button
+If you want to update your project with Github, press the Fetch origin button
+
+## For BFMC Car - Raspberry
+0) Look the password and commands in file on desktop
+// To make changes to Github
+1) cd /home/pi/Desktop/Brain-master
+2) git add .
+3) git commit -m "Write changes"
+4) git push
+// To update from Github
+1) cd /home/pi/Desktop/Brain-master
+2) git pull
+
+
+
+
+## Terminal output
+Starting the processes! [<CameraProcess(CameraProcess-1, initial daemon)>, <CameraStreamerProcess(CameraStreamerProcess-2, initial daemon)>, <SerialHandlerProcess(SerialHandlerProcess-3, initial daemon)>, <RemoteControlReceiverProcess(RemoteControlReceiverProcess-4, initial daemon)>]
+/usr/lib/python3/dist-packages/picamera/encoders.py:521: PiCameraAlphaStripping: using alpha-stripping to convert to non-alpha format; you may find the equivalent alpha format faster
+  "using alpha-stripping to convert to non-alpha "
+Process CameraStreamerProcess-2:
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/pi/Desktop/Brain-master/src/utils/camerastreamer/CameraStreamerProcess.py", line 61, in run
+    self._init_socket()
+  File "/home/pi/Desktop/Brain-master/src/utils/camerastreamer/CameraStreamerProcess.py", line 87, in _init_socket
+    self.client_socket.connect((self.serverIp, self.port))
+OSError: [Errno 113] No route to host
+
+
