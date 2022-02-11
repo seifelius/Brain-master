@@ -52,19 +52,19 @@ class CameraReceiverProcess(WorkerProcess):
 
         Parameters
         ----------
-        inPs : list(Pipe)
+        inPs : list(Pipe)  
             List of input pipes
-        outPs : list(Pipe)
+        outPs : list(Pipe) 
             List of output pipes
         """
         super(CameraReceiverProcess,self).__init__(inPs, outPs)
 
-
+        
 
         self.imgSize    = (480,640,3)
     # ===================================== RUN ==========================================
     def run(self):
-        """Apply the initializers and start the threads.
+        """Apply the initializers and start the threads. 
         """
         self._init_socket()
         super(CameraReceiverProcess,self).run()
