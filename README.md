@@ -1,7 +1,7 @@
 # Working with Github
 
-# To run the code
-
+## To run the code
+sudo python3 /home/pi/Desktop/Brain-master/main.py
 
 ## For Windows
 
