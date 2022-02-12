@@ -1,3 +1,7 @@
+# Parameters
+## PID
+P = 8, I = 14, D = 0.55
+
 # Working with Github
 
 ## To run the code
