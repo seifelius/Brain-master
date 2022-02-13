@@ -61,10 +61,10 @@ class RcBrainThread:
         self.speed = 0.0
         self.steerAngle = 0.0
         self.pida = False
-        self.pids_kp = 0.115000
-        self.pids_ki = 0.810000
-        self.pids_kd = 0.000222
-        self.pids_tf = 0.040000
+        self.pids_kp = 8
+        self.pids_ki = 14
+        self.pids_kd = 0.55
+        self.pids_tf = 0.04
 
         #----------------- CONSTANT VALUES --------------------
         #this values do not change
