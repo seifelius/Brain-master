@@ -16,13 +16,18 @@ sudo python3 /home/pi/Desktop/Brain-master/main.py
 If you want to update your project with Github, press the Fetch origin button
 
 ## For BFMC Car - Raspberry
-0) Look the password and commands in file on desktop
+// For installing
+git clone https://github.com/seifelius/Brain-master.git
+
 // To make changes to Github
+0) Look the password and commands in file on desktop
 1) cd /home/pi/Desktop/Brain-master
 2) git add .
 3) git commit -m "Write changes"
 4) git push
+
 // To update from Github
+0) Look the password and commands in file on desktop
 1) cd /home/pi/Desktop/Brain-master
 2) git pull
 
