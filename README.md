@@ -34,20 +34,17 @@ git clone https://github.com/seifelius/Brain-master.git
 2) git pull
 
 
+Error:
 
-
-## Terminal output
-Starting the processes! [<CameraProcess(CameraProcess-1, initial daemon)>, <CameraStreamerProcess(CameraStreamerProcess-2, initial daemon)>, <SerialHandlerProcess(SerialHandlerProcess-3, initial daemon)>, <RemoteControlReceiverProcess(RemoteControlReceiverProcess-4, initial daemon)>]
-/usr/lib/python3/dist-packages/picamera/encoders.py:521: PiCameraAlphaStripping: using alpha-stripping to convert to non-alpha format; you may find the equivalent alpha format faster
-  "using alpha-stripping to convert to non-alpha "
-Process CameraStreamerProcess-2:
+Starting the processes! [<SerialHandlerProcess(SerialHandlerProcess-1, initial daemon)>, <RemoteControlReceiverProcess(RemoteControlReceiverProcess-2, initial daemon)>]
+Process RemoteControlReceiverProcess-2:
 Traceback (most recent call last):
-  File "/usr/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
-    self.run()
-  File "/home/pi/Desktop/Brain-master/src/utils/camerastreamer/CameraStreamerProcess.py", line 61, in run
-    self._init_socket()
-  File "/home/pi/Desktop/Brain-master/src/utils/camerastreamer/CameraStreamerProcess.py", line 87, in _init_socket
-    self.client_socket.connect((self.serverIp, self.port))
-OSError: [Errno 113] No route to host
+File "/usr/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+self.run()
+File "/home/pi/Desktop/Brain-master/src/utils/remotecontrol/RemoteControlReceiverProcess.py", line 55, in run
+self._init_socket()
+File "/home/pi/Desktop/Brain-master/src/utils/remotecontrol/RemoteControlReceiverProcess.py", line 69, in _init_socket
+self.server_socket.bind((self.serverIp, self.port))
+OSError: [Errno 98] Address already in use
 
 
