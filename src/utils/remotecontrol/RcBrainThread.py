@@ -1,6 +1,6 @@
 # Copyright (c) 2019, Bosch Engineering Center Cluj and BFMC organizers
 # All rights reserved.
-
+tt
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
 
@@ -76,7 +76,7 @@ class RcBrainThread:
 
         #----------------- DEFAULT VALUES ----------------------
         #when the RC is reset, this are the default values
-        self.default_configParam = RcBrainConfigParams(20.5,20.0,1.5,2.0, 0.001, 0.001, 0.000001)
+        self.default_configParam = RcBrainConfigParams(14.0,20.0,1.5,2.0, 0.001, 0.001, 0.000001)
         
         #----------------- PARAMETERS -------------------------
         #this parameter can be modified via key events. 

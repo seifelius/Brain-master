@@ -73,9 +73,9 @@ class CameraStreamerProcess(WorkerProcess):
 
     # ===================================== INIT SOCKET ==================================
     def _init_socket(self):
-        """Initialize the socket client. 
+        """Initialize the socket client.
         """
-        self.serverIp   =  '192.168.1.102' # PC ip
+        self.serverIp   =  '192.168.0.103' # PC ip
         self.port       =  2244            # com port
 
         self.client_socket = socket.socket()
@@ -111,6 +111,8 @@ class CameraStreamerProcess(WorkerProcess):
                 stamps, image = inP.recv()
                  
                 result, image = cv2.imencode('.jpg', image, encode_param)
+                image = cv2.svtColor(image, cv2.COLOR_BRG2GRAY)
+                #image = cv2.Canny(image, 50,150)
                 data   =  image.tobytes()
                 size   =  len(data)
 
