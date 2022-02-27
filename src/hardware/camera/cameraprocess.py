@@ -26,8 +26,10 @@
 # OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
 
-from src.templates.workerprocess            import WorkerProcess
-from src.hardware.camera.CameraThread       import CameraThread
+#from src.templates.workerprocess            import WorkerProcess
+from src.templates.workerprocess            import *
+#from src.hardware.camera.CameraThread       import CameraThread
+from src.hardware.camera.CameraThread       import *
 
 class CameraProcess(WorkerProcess):
     #================================ CAMERA PROCESS =====================================

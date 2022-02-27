@@ -60,4 +60,13 @@ class WriteThread(Thread):
             self.serialCom.write(command_msg.encode('ascii'))
             self.logFile.write(command_msg)
 
+        # while True:
+        #     command = self.inP.recv()
+        #     print(type(command))
+        #     command = json.loads(command)
+        #     print(type(command))
+        #     # Unpacking the dictionary into action and values
+        #     command_msg = self.messageConverter.get_command(**command)
+        #     self.serialCom.write(command_msg.encode('ascii'))
+        #     self.logFile.write(command_msg)
 
